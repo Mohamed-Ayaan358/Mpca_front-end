@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align:center">PPM of Co2 currently in the atmosphere is:
+            <div id="value"></div>
+        </h1>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+<script>
+    // const fetchUsers = () => {
+    //     axios.get('https://reqres.in/api/users')
+    //         .then(response => {
+    //             const users = response.data.data;
+    //             console.log(`GET list users`, users);
+    //         })
+    //         .catch(error => console.error(error));
+    // };
+    const fetchUsers = () => {
+        document.getElementById("value").innerText = 6;
+    }
+
+    const checkColor = () => {
+        if (document.getElementById("value").innerText > 6) {
+            document.getElementById("value").style.color = "red";
+        } else {
+            document.getElementById("value").style.color = "green";
+        }
+    }
+    fetchUsers();
+    checkColor();
+</script>
+
+
+</html>
